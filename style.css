@@ -1,0 +1,109 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+body{
+    background: rgb(68, 67, 67);
+}
+
+#main{
+   width: 400px;
+   padding: 25px 35px;
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%,-50%);
+   background-color: azure;
+   border-radius: 10px;
+}
+
+#main p{
+    font-weight: 600;
+    font-size: 15px;
+    margin-bottom: 8px;
+    font-size: 2rem;
+    text-align: center;
+}
+
+#main input{
+    width: 100%;
+    height: 50px;
+    /* border: 1px solid #000000; */
+    outline: 0;
+    padding: 10px;
+    margin: 10px 0 20px;
+    border-radius: 5px;
+}
+
+#bt{
+    font-size: 1rem;
+    width: 100%;
+    height: 50px;
+    background: #000000;
+    color: #fff;
+    border: 0;
+    outline: none;
+    border-radius: 5px;
+    box-shadow: 0 10px 10px rgba(0,0,0,0.1);
+    cursor: pointer;
+    margin: 20px 0;
+    font-weight: bold;
+}
+
+#bt:hover{
+    background-color: rgb(44, 42, 42);
+}
+ 
+#bt:active{
+    background-color: rgb(3, 3, 3);
+    box-shadow: 0 5px #f3eded;
+    transform: translateY(1px);
+}
+
+#qrimg{
+    border-radius: 5px;
+    width: 200px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 1s;
+}
+
+#qrimg img{
+    width: 100%;
+    padding: 10px;
+}
+
+#qrimg.show-img{
+    max-height: 300px;
+    margin: 10px auto;
+    border: 1px solid #fffefe;
+}
+
+.error{
+    animation: shake 0.1s linear 10;
+    border: 1px solid red;
+}
+
+@keyframes shake{
+    0%{
+        transform: translateX(0);
+    }
+
+    25%{
+        transform: translateX(-2px);
+    }
+
+    50%{
+        transform: translateX(0);
+    }
+
+    75%{
+        transform: translateX(2px);
+    }
+
+    100%{
+        transform: translateX(0);
+    }
+}
